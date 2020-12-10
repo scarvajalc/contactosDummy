@@ -30,6 +30,6 @@ async def crear_contacto_solo_nombre(contacto: models.ContactoIn):
 async def obtener_contacto(id: str):
     contacto = repositorio.obtener_contacto_con_telefonos(id)
     if contacto is None:
-        raise HTTPException(status_code=400, detail="Usuario no encontrado")
+        raise HTTPException(status_code=400, detail='Usuario no encontrado')
     else:
         return contacto
